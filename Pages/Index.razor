@@ -1,0 +1,24 @@
+﻿@page "/"
+
+@using Syncfusion.Blazor.Schedule
+@using Syncfusion.Blazor.Data
+@using syncfusion_blazor_app.Data
+
+<SfSchedule @ref="AvailabilityScheduleRef" TValue="AppointmentData" Width="100%" Height="600px" @bind-SelectedDate="@SelectedDate">
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
+    <ScheduleEventSettings TValue="AppointmentData">
+        <SfDataManager AdaptorInstance="@typeof(AppointmentDataAdaptor)" Adaptor="Adaptors.CustomAdaptor">
+        </SfDataManager>
+    </ScheduleEventSettings>
+</SfSchedule>
+
+@code {
+    SfSchedule<AppointmentData>? AvailabilityScheduleRef;
+    DateTime SelectedDate { get; set; } = new DateTime(2022, 5, 17);
+}
