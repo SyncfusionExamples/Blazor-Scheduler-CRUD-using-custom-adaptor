@@ -1,6 +1,6 @@
 # Blazor-Scheduler-CRUD-using-custom-adaptor
 
-This application explains the procedures to perform CRUD actions with the [Syncfusion Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) using [CustomAdaptor](https://blazor.syncfusion.com/documentation/scheduler/data-binding#using-custom-adaptor). It demonstrates how to implement a custom data adaptor for handling Create, Read, Update, and Delete operations efficiently in Blazor applications.
+This application explains the procedures to perform CRUD actions with the [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) using [CustomAdaptor](https://blazor.syncfusion.com/documentation/scheduler/data-binding#using-custom-adaptor). It demonstrates how to implement a custom data adaptor for handling Create, Read, Update, and Delete operations efficiently in Blazor applications.
 
 ## Overview
 
