@@ -1,16 +1,11 @@
 # How to perform CRUD operations in Blazor Scheduler using Custom Adaptor
 
-This application explains the procedures to perform CRUD actions with the [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) using [CustomAdaptor](https://blazor.syncfusion.com/documentation/scheduler/data-binding#using-custom-adaptor). It demonstrates how to implement a custom data adaptor for handling Create, Read, Update, and Delete operations efficiently in Blazor applications.
-
-## Overview
-
-The Blazor Scheduler is a powerful component for managing events and appointments in web applications. This project showcases advanced data-binding techniques using a custom adaptor to handle CRUD operations seamlessly. Custom adaptors provide flexibility in data retrieval and manipulation, allowing developers to implement custom business logic for event management.
+This application demonstrates how to perform CRUD operations in the [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) using a Custom Adaptor. It showcases implementing custom data-binding logic for Create, Read, Update, and Delete actions, enabling flexible data handling and integration of business logic. The sample serves as a practical guide for managing scheduler events efficiently and building dynamic Blazor applications with advanced data interaction.
 
 ## Prerequisites
 
 * Visual Studio 2022
-* .NET Core 6.0
-* Syncfusion Blazor NuGet packages
+* .NET Core 6.0 or later
 
 ## Features
 
@@ -21,11 +16,10 @@ The Blazor Scheduler is a powerful component for managing events and appointment
 
 ## How to run the project
 
-* Checkout this project to a location in your disk.
-* Open the solution file using the Visual Studio 2022.
-* Restore the NuGet packages by rebuilding the solution.
-* Build the solution to ensure all dependencies are resolved.
-* Run the project using F5 or the Run command.
+1. Checkout this project to your local machine
+2. Open the solution file using Visual Studio 2022
+3. Build the solution to restore the required NuGet packages
+4. Press `F5` to start the application
 
 ## Documentation
 
