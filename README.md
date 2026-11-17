@@ -4,8 +4,8 @@ This application demonstrates how to perform CRUD operations in the [Blazor Sche
 
 ## Prerequisites
 
-* Visual Studio 2022
-* .NET Core 6.0 or later
+* Visual Studio 2022 (17.14+) or later
+* .NET 10.0 SDK or later
 
 ## Features
 
@@ -17,7 +17,7 @@ This application demonstrates how to perform CRUD operations in the [Blazor Sche
 ## How to run the project
 
 1. Checkout this project to your local machine
-2. Open the solution file using Visual Studio 2022
+2. Open the solution file using Visual Studio 2022 (17.14+) or later
 3. Build the solution to restore the required NuGet packages
 4. Press `F5` to start the application
 
