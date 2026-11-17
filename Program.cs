@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Syncfusion.Blazor;
+using syncfusion_blazor_app.Components;
 using syncfusion_blazor_app.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,10 +8,9 @@ var connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename="+ 
 builder.Services.AddDbContext<AppointmentDataContext>(opts => opts.UseSqlServer(connectionString));
 
 // Add services to the container.
-builder.Services.AddRazorPages();
-builder.Services.AddServerSideBlazor();
+builder.Services.AddRazorComponents()
+    .AddInteractiveServerComponents();
 builder.Services.AddSyncfusionBlazor();
-builder.Services.AddSingleton<WeatherForecastService>();
 builder.Services.AddScoped<AppointmentDataService>();
 builder.Services.AddScoped<AppointmentDataAdaptor>();
 
@@ -19,18 +19,17 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
-    app.UseExceptionHandler("/Error");
+    app.UseExceptionHandler("/Error", createScopeForErrors: true);
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
-
+app.UseStatusCodePagesWithReExecute("/not-found", createScopeForStatusCodePages: true);
 app.UseHttpsRedirection();
 
-app.UseStaticFiles();
+app.UseAntiforgery();
 
-app.UseRouting();
+app.MapStaticAssets();
+app.MapRazorComponents<App>()
+    .AddInteractiveServerRenderMode();
 
-app.MapBlazorHub();
-app.MapControllers();
-app.MapFallbackToPage("/_Host");
 app.Run();
